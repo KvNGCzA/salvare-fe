@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/salvare-fe/static/css/main.3fa35938.chunk.css",
-    "main.js": "/salvare-fe/static/js/main.95041d3d.chunk.js",
-    "main.js.map": "/salvare-fe/static/js/main.95041d3d.chunk.js.map",
+    "main.css": "/salvare-fe/static/css/main.ce2720ff.chunk.css",
+    "main.js": "/salvare-fe/static/js/main.6ed27988.chunk.js",
+    "main.js.map": "/salvare-fe/static/js/main.6ed27988.chunk.js.map",
     "runtime-main.js": "/salvare-fe/static/js/runtime-main.d4c27bbd.js",
     "runtime-main.js.map": "/salvare-fe/static/js/runtime-main.d4c27bbd.js.map",
-    "static/js/2.ae4ac5ad.chunk.js": "/salvare-fe/static/js/2.ae4ac5ad.chunk.js",
-    "static/js/2.ae4ac5ad.chunk.js.map": "/salvare-fe/static/js/2.ae4ac5ad.chunk.js.map",
+    "static/js/2.e23357c2.chunk.js": "/salvare-fe/static/js/2.e23357c2.chunk.js",
+    "static/js/2.e23357c2.chunk.js.map": "/salvare-fe/static/js/2.e23357c2.chunk.js.map",
     "index.html": "/salvare-fe/index.html",
-    "precache-manifest.2064d963aab4ef8057f483776b07d111.js": "/salvare-fe/precache-manifest.2064d963aab4ef8057f483776b07d111.js",
+    "precache-manifest.f1ba6ff1a34d23afcca69c4c93d2c911.js": "/salvare-fe/precache-manifest.f1ba6ff1a34d23afcca69c4c93d2c911.js",
     "service-worker.js": "/salvare-fe/service-worker.js",
-    "static/css/main.3fa35938.chunk.css.map": "/salvare-fe/static/css/main.3fa35938.chunk.css.map",
-    "static/js/2.ae4ac5ad.chunk.js.LICENSE": "/salvare-fe/static/js/2.ae4ac5ad.chunk.js.LICENSE",
-    "static/media/logo.svg": "/salvare-fe/static/media/logo.5d5d9eef.svg"
+    "static/css/main.ce2720ff.chunk.css.map": "/salvare-fe/static/css/main.ce2720ff.chunk.css.map",
+    "static/js/2.e23357c2.chunk.js.LICENSE": "/salvare-fe/static/js/2.e23357c2.chunk.js.LICENSE",
+    "static/media/briefcase.svg": "/salvare-fe/static/media/briefcase.7733fd11.svg",
+    "static/media/businessman.svg": "/salvare-fe/static/media/businessman.6064839f.svg",
+    "static/media/gautlet.svg": "/salvare-fe/static/media/gautlet.c5f876c4.svg",
+    "static/media/logo.svg": "/salvare-fe/static/media/logo.5d5d9eef.svg",
+    "static/media/scale.svg": "/salvare-fe/static/media/scale.ba212b3b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d4c27bbd.js",
-    "static/js/2.ae4ac5ad.chunk.js",
-    "static/css/main.3fa35938.chunk.css",
-    "static/js/main.95041d3d.chunk.js"
+    "static/js/2.e23357c2.chunk.js",
+    "static/css/main.ce2720ff.chunk.css",
+    "static/js/main.6ed27988.chunk.js"
   ]
 }
