@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee:400,400i&display=swap');
+
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6em;
+  font-family: 'ABeeZee';
+  font-size: 12px;
+
+  img {
+    width: auto;
+    height: 38px;
+  }
+
+  nav {
+    align-self: center;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        text-transform: uppercase;
+        margin-right: 6em;
+        color: white;
+        letter-spacing: 0.03em;
+
+        .active {
+          color: #F2C94C;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
