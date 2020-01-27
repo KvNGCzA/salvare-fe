@@ -54,7 +54,6 @@
 
 .mobile-header {
   display: none;
-
 }
 
 @media screen and (max-width: 1302px) {
@@ -73,6 +72,13 @@
       width: auto;
       position: relative;
       left: 1em;
+
+      &--close {
+        position: absolute;
+        left: initial;
+        right: 1em;
+        top: 2em;
+      }
     }
 
     .logo {
@@ -87,6 +93,31 @@
       position: relative;
       right: 1em;
       border-radius: 50%;
+    }
+
+    .side-bar {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: #483A4E;
+      top: 0;
+      transition: left 500ms ease-in-out;
+
+      nav {
+        ul {
+          font-size: 2em;
+
+          li {
+            display: block;
+            padding: 1em 0 1em 1em;
+          }
+        }
+
+        &:last-child {
+          position: absolute;
+          bottom: 0;
+        }
+      }
     }
   }
 }
