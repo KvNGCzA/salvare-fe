@@ -46,7 +46,7 @@ const LandingPage = () => {
           <p className="content-title">are you a lawyer?</p>
           <Link className="landing-button" to='solve-a-case'>solve a case</Link>
         </div>
-        <div>
+        <div className="right-content">
           <img src={businessman} alt="business man"/>
         </div>
       </div>

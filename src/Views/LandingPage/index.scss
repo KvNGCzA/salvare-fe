@@ -79,9 +79,50 @@
         }
       }
     }
+
+    .right-content {
+
+    }
+
     .info-cards {
       display: flex;
       margin: 4em 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1302px) {
+  .landing-page {
+    justify-content: center;
+
+    .page-content {
+
+      .right-content {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-page {
+    justify-content: center;
+
+    .page-content {
+
+      .left-content {
+
+
+      }
+
+      .info-cards {
+        flex-direction: column;
+      }
+
+      .right-content {
+        display: none;
+      }
     }
   }
 }
