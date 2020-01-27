@@ -44,8 +44,12 @@ class Header extends Component {
         </div>
         <div className="header mobile-header">
           <img src={menu} alt="salvare menu-icon" className="menu-icon" />
-          <Link to="/"><img src={logo} alt="salvare logo" className="logo"/></Link>
-          <div className="profile-image"/>
+          <Link to="/">
+            <img src={logo} alt="salvare logo" className="logo"/>
+          </Link>
+          <Link to="/profile">
+            <div className="profile-image"/>
+          </Link>
         </div>
       </Fragment>
     );

@@ -1,13 +1,19 @@
 .App {
   text-align: center;
 }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 html {
   background: linear-gradient(128.03deg, #BB6BD9 13.39%, #483A4E 78.11%);
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   /* width: 100vw; */
   font-size: 12px;
+  overflow-y: scroll;
 }

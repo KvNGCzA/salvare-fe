@@ -32,13 +32,16 @@
     font-size: 1em;
     text-transform: uppercase;
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .landing-page {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: flex-end;
-  // margin-top: 10em;
   align-items: center;
   overflow-y: scroll;
 
@@ -106,14 +109,45 @@
 }
 
 @media screen and (max-width: 768px) {
+  .info-card {
+    margin-right: 0;
+    margin-bottom: 1px;
+    width: 90%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .info-cards {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
   .landing-page {
     justify-content: center;
+    margin-top: 7em;
 
     .page-content {
 
       .left-content {
 
+        .content-title {
+          text-align: center;
+          font-size: 1.2em;
+          padding: 0 0.4em;
+        }
 
+        .landing-button {
+          width: 90%;
+          font-size: 1.3em;
+          border-radius: 0.2em;
+
+          &:last-child {
+            margin-bottom: 7em;;
+          }
+        }
       }
 
       .info-cards {
