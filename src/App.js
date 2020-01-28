@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.scss';
 import LandingPage from './Views/LandingPage';
 import ReportACase from './Views/ReportACase';
+import SolveACase from './Views/SolveACase';
 import Header from './Components/Header';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           </Route>
           <Route path="/" component={LandingPage} exact/>
           <Route path="/report-a-case" component={ReportACase} exact/>
+          <Route path="/solve-a-case" component={SolveACase} exact/>
         </Switch>
       </Router>
     </Fragment>

@@ -23,7 +23,7 @@ class Header extends Component {
   render() {
     const { location: { pathname } } = this.props;
     return (
-      <Fragment>
+      <header>
         <div className="header">
           <img src={logo} alt="salvare logo"/>
           <nav>
@@ -94,7 +94,7 @@ class Header extends Component {
             </nav>
           </div>
         </div>
-      </Fragment>
+      </header>
     );
   }
 }
