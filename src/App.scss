@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee:400,400i&display=swap');
+
 .App {
   text-align: center;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   letter-spacing: 0.07em;
   outline: none !important;
+  font-family: 'ABeeZee';
+}
+
+button {
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 html {

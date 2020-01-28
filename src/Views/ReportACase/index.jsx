@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import warning from '../../images/warning.svg';
+import Buttons from '../../Components/Buttons';
 
 class ReportACase extends Component {
 
@@ -46,14 +47,15 @@ class ReportACase extends Component {
               </div>
             </div>
             <div className="form-body form-right">
-            <div className="form-input">
-              <span>short description</span>
-              <textarea placeholder="e.g Young boy assaulted and extorted by Federal Sars"/>
-            </div>
-            <div className="form-input">
-              <span>long description</span>
-              <textarea className="last-textarea" placeholder="Try to provide as much information as possible including date of incident, location, etc"/>
-            </div>
+              <div className="form-input">
+                <span>short description</span>
+                <textarea placeholder="e.g Young boy assaulted and extorted by Federal Sars"/>
+              </div>
+              <div className="form-input">
+                <span>long description</span>
+                <textarea className="last-textarea" placeholder="Try to provide as much information as possible including date of incident, location, etc"/>
+              </div>
+              <Buttons type="report submit button" />
             </div>
           </form>
         </div>

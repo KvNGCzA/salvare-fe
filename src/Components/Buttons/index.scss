@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee:400,400i&display=swap');
+
+.btn {
+  width: 12.6em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  img {
+    position: absolute;
+    right: 1em;
+  }
+
+  &--report-submit {
+    background-color: #27AE60;
+  }
+}
