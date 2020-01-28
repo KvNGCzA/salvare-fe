@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
-import Select, { components } from 'react-select'
+import Select from 'react-select'
 import './index.scss';
-import dropdownIndicator from '../../images/dropdown-indicator.svg';
 import mocks from './__mocks__';
+import CaseCard from '../../Components/CaseCard';
 
 const options = [
   { value: 'newest', label: 'newest' },
   { value: 'in court', label: 'in court' },
   { value: 'vanilla', label: 'Vanilla' }
 ]
-const DropdownIndicator = () => {
-  return (
-    <components.DropdownIndicator>
-      <img src={dropdownIndicator}/>
-    </components.DropdownIndicator>
-  );
-};
 
 class SolveACase extends Component {
 
@@ -41,6 +34,11 @@ class SolveACase extends Component {
           <p>all cases</p>
           <div className="sort-drop">
             <Select options={options} defaultValue={options[0]}/>
+          </div>
+        </div>
+        <div className="case-container">
+          <div className="card-container">
+            {mocks.map((data, index) => (<CaseCard data={data} key={index} />))}
           </div>
         </div>
       </div>

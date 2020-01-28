@@ -1,13 +1,25 @@
 $yellow: #F2C94C;;
+$border: #E0E0E0;
+$text: #4F4F4F;
+$text2: #828282;
+$inactive: #EB5757;
+$active: #27AE60;
+$status: #9B51E0;
 
 .solve-page {
   margin: 10em 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .head {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
+    width: 1217px;
+    margin-bottom: 6em;
 
     .result-count {
       button {
@@ -32,9 +44,6 @@ $yellow: #F2C94C;;
 
       * {
         outline: none !important;
-      }
-
-      div[class$="-container"] {
       }
 
       div[class$="-control"] {
@@ -91,6 +100,20 @@ $yellow: #F2C94C;;
           }
         }
       }
+    }
+  }
+
+  .case-container {
+    display: flex;
+    justify-content: center;
+
+    .card-container {
+      display: grid;
+      width: 1217px;
+      justify-content: space-between;
+      grid-template-columns: 352px 352px 352px;
+      grid-template-rows: 245px; 
+      grid-row-gap: 5em;
     }
   }
 }

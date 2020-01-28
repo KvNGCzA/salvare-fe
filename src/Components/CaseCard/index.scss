@@ -1,0 +1,74 @@
+$yellow: #F2C94C;;
+$border: #E0E0E0;
+$text: #4F4F4F;
+$text2: #828282;
+$inactive: #EB5757;
+$active: #27AE60;
+$status: #9B51E0;
+
+.case-card {
+  height: 245px;
+  width: 352px;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-top: 1px solid $border;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  .card-details {
+    flex: 1;
+    color: $text;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .short-description {
+      font-size: 16px;
+      margin-bottom: 2.5em;
+      margin-top: 0.5em;
+      width: 293px;
+    }
+
+    .more-details {
+      width: 293px;
+    }
+
+    .state {
+      color: $text2;
+      margin-bottom: 0.5em;
+    }
+
+    .status {
+      color: $status;
+      font-style: italic;
+      font-size: 10px;
+    }
+
+    .active {
+      color: $active;
+    }
+
+    .inactive {
+      color: $inactive;
+    }
+  }
+
+  button {
+    height: 42px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: $border;
+    color: $text;
+    font-size: 1.1em;
+    background-color: white;
+
+    img {
+      position: absolute;
+      right: 8em;
+    }
+  }
+}
