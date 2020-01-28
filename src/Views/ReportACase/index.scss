@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee:400,400i&display=swap');
+$placeholder: #BDBDBD;
+$textcolor: #4F4F4F;
+
+@mixin placeholder {
+  ::-webkit-input-placeholder { /* Edge */
+    color: $placeholder;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $placeholder;
+  }
+  
+  ::placeholder {
+    color: $placeholder;
+  }
+}
+
+.report-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'ABeeZee';
+
+  .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      color: white;
+      text-transform: capitalize;
+      font-size: 2.167em;
+      margin-bottom: 0.6em;
+      letter-spacing: 0.14em;
+    }
+  
+    .warning {
+      display: flex;
+
+      .warning-sign {
+        height: 17px;
+        margin-right: 1em;
+      }
+  
+      p {
+        font-size: 1.17em;
+        color: #F2C94C;
+      }
+    }
+  }
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+
+    form {
+      display: flex;
+
+      .form-body {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        
+      }
+
+      .form-left {
+        margin-right: 5em;
+      }
+  
+      .form-right {
+        
+      }
+    }
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    
+    span {
+      color: white;
+      text-transform: capitalize;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.5em;
+    }
+
+    input {
+      height: 3.55em;
+      padding: 0 1em;
+      width: 43.2em;
+      margin-bottom: 2.3em;
+      border-radius: 3px;
+      border: 0;
+      color: $textcolor;
+    }
+
+    textarea {
+      padding: 1em;
+      height: 12em;
+      margin-bottom: 2.3em;
+      border-radius: 3px;
+      border: 0;
+      width: 59.6em;
+      color: $textcolor;
+    }
+
+    .last-textarea {
+      height: 23.7em;
+    }
+
+    @include placeholder()
+  }
+
+  .radio-buttons {
+
+    div {
+      display: flex;
+      color: white;
+      text-transform: capitalize;
+
+      input {
+        width: initial;
+        height: initial;
+        margin-right: 1em;
+
+        &:last-child {
+          margin-left: 2em;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import LandingPage from './Views/LandingPage';
+import ReportACase from './Views/ReportACase';
 import Header from './Components/Header';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             </div>
           </Route>
           <Route path="/" component={LandingPage} exact/>
+          <Route path="/report-a-case" component={ReportACase} exact/>
         </Switch>
       </Router>
     </Fragment>
