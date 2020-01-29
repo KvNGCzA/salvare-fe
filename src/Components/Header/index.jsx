@@ -7,7 +7,8 @@ import closeMenu from '../../images/close-menu.svg';
 
 class Header extends Component {
   state = {
-    sidebarLeft: '-100vw'
+    sidebarLeft: '-100vw',
+    showSignupModal: 'none'
   }
 
   showSidebar = () => {
@@ -20,8 +21,30 @@ class Header extends Component {
 
   resetSidebar = () => this.setState({  sidebarLeft: '-100vw' })
 
+  renderFormInput = ({ label, placeholder, type }) => {
+    return (
+      <div className="form-input" key={label}>
+        <span>{label}</span>
+        <input className="" placeholder={placeholder} type={type} required/>
+      </div>
+    );
+  }
+
+  toggleSignupModal = () => {
+    if (this.state.showSignupModal === 'none') {
+      return this.setState({ showSignupModal: 'flex' })
+    }
+    return this.setState({ showSignupModal: 'none' })
+  }
+
   render() {
     const { location: { pathname } } = this.props;
+    const fields = [
+      { label: 'full name', placeholder: 'e.g Christopher Akanmu', type: 'text' },
+      { label: 'email', placeholder: 'e.g christopher@example.com', type: 'email' },
+      { label: 'phone number', placeholder: 'e.g 09000000011', type: 'tel' },
+      { label: 'password', placeholder: '', type: 'passwordd' }
+    ];
     return (
       <header>
         <div className="header">
@@ -37,9 +60,9 @@ class Header extends Component {
               <li>
                 <Link to='/solve-a-case' className={pathname === '/solve-a-case' ? 'active' : ''}>solve a case</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to='/donate' className={pathname === '/donate' ? 'active' : ''}>donate</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to='/about' className={pathname === '/about' ? 'active' : ''}>about us</Link>
               </li>
@@ -49,9 +72,25 @@ class Header extends Component {
           <nav>
             <ul>
               <li>login</li>
-              <li>sign up</li>
+              <li onClick={this.toggleSignupModal}>sign up</li>
             </ul>
           </nav>
+          <div className="signup-overlay" style={{ display: this.state.showSignupModal }}>
+            <div className="modal modal--signup">
+            <img onClick={this.toggleSignupModal} src={closeMenu} alt="salvare closemenu-icon" className="menu-icon menu-icon--close" />
+              <div className="modal-image signup-image" />
+              <div className="form-content">
+                <p>are you a lawyer?</p>
+                <p>register to help</p>
+                <form>
+                  {fields.map(field => this.renderFormInput({...field }))}
+                  <p>By clicking register you agree to all <span>Terms and Conditions</span></p>
+                  <button>register</button>
+                </form>
+                <p>already have an account? <span>login</span></p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="header mobile-header">
           <img src={menu} alt="salvare menu-icon" className="menu-icon" onClick={this.showSidebar}/>
@@ -74,9 +113,9 @@ class Header extends Component {
                 <li onClick={this.resetSidebar}>
                   <Link to='/solve-a-case' className={pathname === '/solve-a-case' ? 'active' : ''}>solve a case</Link>
                 </li>
-                <li onClick={this.resetSidebar}>
+                {/* <li onClick={this.resetSidebar}>
                   <Link to='/donate' className={pathname === '/donate' ? 'active' : ''}>donate</Link>
-                </li>
+                </li> */}
                 <li onClick={this.resetSidebar}>
                   <Link to='/about' className={pathname === '/about' ? 'active' : ''}>about us</Link>
                 </li>
