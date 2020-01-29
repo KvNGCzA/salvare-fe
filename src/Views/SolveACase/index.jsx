@@ -7,7 +7,7 @@ import CaseCard from '../../Components/CaseCard';
 const options = [
   { value: 'newest', label: 'newest' },
   { value: 'in court', label: 'in court' },
-  { value: 'vanilla', label: 'Vanilla' }
+  { value: 'not in court', label: 'not in court' }
 ]
 
 class SolveACase extends Component {
@@ -23,6 +23,7 @@ class SolveACase extends Component {
   render() {
     return(
       <div className="solve-page">
+        <p className="mobile-title">all cases</p>
         <div className="head">
           <div className="result-count">
             <button onClick={() => this.changeResultCount(12)}className={this.state.resultCount === 12 ? 'active' : ''}>12</button>
@@ -31,9 +32,9 @@ class SolveACase extends Component {
             -
             <button onClick={() => this.changeResultCount(48)}className={this.state.resultCount === 48 ? 'active' : ''}>48</button>
           </div>
-          <p>all cases</p>
+          <p className="title">all cases</p>
           <div className="sort-drop">
-            <Select options={options} defaultValue={options[0]}/>
+            <Select options={options} defaultValue={options[0]} isSearchable={false}/>
           </div>
         </div>
         <div className="case-container">
