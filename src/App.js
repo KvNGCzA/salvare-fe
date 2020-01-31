@@ -1,25 +1,20 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import logo from './logo.svg';
+import under_construction from './images/under_construction.svg';
 import './App.scss';
 import LandingPage from './Views/LandingPage';
 import ReportACase from './Views/ReportACase';
 import SolveACase from './Views/SolveACase';
 import Header from './Components/Header';
+import UnderConstruction from './Views/UnderConstruction';
 
-function App() {
+const App = () => {
   return (
     <Fragment>
       <Router>
         <Header />
         <Switch>
-          <Route path="/about" exact>
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-              </header>
-            </div>
-          </Route>
+          <Route path="/about" component={UnderConstruction} exact />
           <Route path="/" component={LandingPage} exact/>
           <Route path="/report-a-case" component={ReportACase} exact/>
           <Route path="/solve-a-case" component={SolveACase} exact/>
