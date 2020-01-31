@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import under_construction from '../../images/under_construction.svg';
 import './index.scss';
 

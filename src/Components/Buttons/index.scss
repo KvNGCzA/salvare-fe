@@ -21,3 +21,35 @@
     background-color: #27AE60;
   }
 }
+
+.landing-button {
+  width: 14.4em;
+  background: #BB6BD9;
+  border-radius: 5.833em;
+  border: 0;
+  margin-top: 1em;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  font-size: 2.167em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  text-align: center;
+  padding: 1em 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-button {
+    width: 90%;
+    font-size: 1.3em;
+    border-radius: 0.2em;
+
+    &:last-child {
+      margin-bottom: 7em;;
+    }
+  }
+}

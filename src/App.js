@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import under_construction from './images/under_construction.svg';
 import './App.scss';
 import LandingPage from './Views/LandingPage';
 import ReportACase from './Views/ReportACase';
 import SolveACase from './Views/SolveACase';
 import Header from './Components/Header';
 import UnderConstruction from './Views/UnderConstruction';
+import NotFound from './Views/NotFound';
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/" component={LandingPage} exact/>
           <Route path="/report-a-case" component={ReportACase} exact/>
           <Route path="/solve-a-case" component={SolveACase} exact/>
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </Fragment>
