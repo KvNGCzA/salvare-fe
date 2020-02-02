@@ -9,7 +9,35 @@ import Buttons from '../Buttons';
 class Header extends Component {
   state = {
     sidebarLeft: '-100vw',
-    showSignupModal: 'flex'
+    showSignupModal: 'none'
+  }
+
+  componentDidMount() {
+
+    setTimeout(() => {
+      // initialize google auth
+      window.gapi.load('auth2', () => {
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        this.auth2 = window.gapi.auth2.init({
+          client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+        });
+        const element = document.getElementById('google-signin');
+        this.auth2.attachClickHandler(
+          element,
+          {},
+          googleUser => this.googleSignIn(googleUser),
+          error => console.log(JSON.stringify(error, undefined, 2))
+        );
+      });
+    }, 2000);
+  }
+
+  googleSignIn = (googleUser) => {
+    const profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId());
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
   }
 
   showSidebar = () => {
@@ -85,7 +113,7 @@ class Header extends Component {
                 <p>are you a lawyer?</p>
                 <p>register to help</p>
                 <Buttons type="linkedin button" text="register with linkedin"/>
-                <Buttons type="google button" text="register with google"/>
+                <Buttons type="google button" text="register with google" />
                 <form>
                   {fields.map(field => this.renderFormInput({...field }))}
                   <p>By clicking register you agree to all <span>Terms and Conditions</span></p>

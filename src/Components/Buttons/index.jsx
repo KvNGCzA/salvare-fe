@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import mailSend from '../../images/mail-send.svg';
 import linkedin_icon from '../../images/linkedin_icon.svg';
 import google_icon from '../../images/google_icon.svg';
 import './index.scss';
-import { Link } from 'react-router-dom';
 
 const reportSubmitButton = () => {
   return (
@@ -22,7 +23,7 @@ const homeButton = ({ to, text }) => {
 
 const googleButton = ({ text }) => {
   return(
-    <button className="social-button social-button--google">
+    <button id="google-signin" className="social-button social-button--google">
       <div>
         <img src={google_icon} alt="google sign in"/>
       </div>
