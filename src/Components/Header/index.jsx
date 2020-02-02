@@ -4,11 +4,12 @@ import './index.scss';
 import logo from '../../images/logo.png';
 import menu from '../../images/menu.svg';
 import closeMenu from '../../images/close-menu.svg';
+import Buttons from '../Buttons';
 
 class Header extends Component {
   state = {
     sidebarLeft: '-100vw',
-    showSignupModal: 'none'
+    showSignupModal: 'flex'
   }
 
   showSidebar = () => {
@@ -75,6 +76,7 @@ class Header extends Component {
               <li onClick={this.toggleSignupModal}>sign up</li>
             </ul>
           </nav>
+
           <div className="signup-overlay" style={{ display: this.state.showSignupModal }}>
             <div className="modal modal--signup">
             <img onClick={this.toggleSignupModal} src={closeMenu} alt="salvare closemenu-icon" className="menu-icon menu-icon--close" />
@@ -82,6 +84,8 @@ class Header extends Component {
               <div className="form-content">
                 <p>are you a lawyer?</p>
                 <p>register to help</p>
+                <Buttons type="linkedin button" text="register with linkedin"/>
+                <Buttons type="google button" text="register with google"/>
                 <form>
                   {fields.map(field => this.renderFormInput({...field }))}
                   <p>By clicking register you agree to all <span>Terms and Conditions</span></p>
@@ -91,7 +95,9 @@ class Header extends Component {
               </div>
             </div>
           </div>
+
         </div>
+
         <div className="header mobile-header">
           <img src={menu} alt="salvare menu-icon" className="menu-icon" onClick={this.showSidebar}/>
           <Link to="/">

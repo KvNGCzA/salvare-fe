@@ -15,6 +15,7 @@
 
 button {
   border-radius: 3px;
+  border: 0;
 
   &:hover {
     cursor: pointer;
@@ -27,7 +28,6 @@ html {
 
 body {
   min-height: 100vh;
-  /* width: 100vw; */
   font-size: 12px;
   overflow-y: scroll;
 }

@@ -42,6 +42,55 @@
   }
 }
 
+.social-button {
+  display: flex;
+  width: 282px;
+  height: 39px;
+  border-radius: 10px;
+  margin: 0.5em;
+
+  &--linkedin {
+    background-color: #0077B5;
+
+    div {
+      &:last-child {
+        color: white;
+      }
+    }
+  }
+
+  &--google {
+    div {
+      &:last-child {
+        color: #2F80ED;
+      }
+    }
+  }
+
+  div {
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      width: 43px;
+      box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.15);
+      img {
+        width: 21px;
+        height: 21px;
+      }
+    }
+
+    &:last-child {
+      text-transform: capitalize;
+      font-size: 1.3em;
+      flex: 1;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .landing-button {
     width: 90%;
